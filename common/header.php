@@ -44,8 +44,17 @@
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
     <header>
       
-        <h1 id="site-title"><?php echo link_to_home_page(theme_logo(), array('alt' => 'Logo for Carleton Guide to Medieval Rome', 'title' => 'Logo for Carleton Guide to Medieval Rome')); ?></h1>
-            
+        <?php/*<h1 id="site-title"><?php echo link_to_home_page(theme_logo(), array('alt' => 'Logo for Carleton Guide to Medieval Rome', 'title' => 'Logo for Carleton Guide to Medieval Rome')); ?></h1> */ ?>
+        <h1 id="site-title">
+            <a href="<?php echo html_escape(url('/')); ?>" title="<?php echo html_escape(option('site_title')); ?>">
+                <?php if (theme_logo()): ?>
+                    <?php echo theme_logo(); ?>
+                <?php else: ?>
+                    <span class="site-title-fallback"><?php echo html_escape(option('site_title')); ?></span>
+                <?php endif; ?>
+            </a>
+        </h1>    
+
         <?php echo search_form(array( 'submit_value' => 'Search')); ?>
     
         
@@ -59,7 +68,18 @@
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
     <header>
     <div class="row">
-        <div class="column left"><h1 id="site-title"><?php echo link_to_home_page(theme_logo(), array('alt' => 'Logo for Carleton Guide to Medieval Rome', 'title' => 'Logo for Carleton Guide to Medieval Rome')); ?></h1>
+        <?php /*<div class="column left"><h1 id="site-title"><?php echo link_to_home_page(theme_logo(), array('alt' => 'Logo for Carleton Guide to Medieval Rome', 'title' => 'Logo for Carleton Guide to Medieval Rome')); ?></h1> 
+        </div>*/ ?>
+        <div class="column left">
+            <h1 id="site-title">
+                <a href="<?php echo html_escape(url('/')); ?>" title="<?php echo html_escape(option('site_title')); ?>">
+                    <?php if (theme_logo()): ?>
+                        <?php echo theme_logo(); ?>
+                    <?php else: ?>
+                        <span class="site-title-fallback"><?php echo html_escape(option('site_title')); ?></span>
+                    <?php endif; ?>
+                </a>
+            </h1>
         </div>
         <!-- this section of php is needed for header to work -->
         <!-- <div class="column middle"><nav id="navigation" data-role="none">
