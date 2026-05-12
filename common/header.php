@@ -43,8 +43,7 @@
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
     <header>
-      
-        <?php/*<h1 id="site-title"><?php echo link_to_home_page(theme_logo(), array('alt' => 'Logo for Carleton Guide to Medieval Rome', 'title' => 'Logo for Carleton Guide to Medieval Rome')); ?></h1> */ ?>
+    
         <h1 id="site-title">
             <a href="<?php echo html_escape(url('/')); ?>" title="<?php echo html_escape(option('site_title')); ?>">
                 <?php if (theme_logo()): ?>
@@ -68,11 +67,9 @@
     <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
     <header>
     <div class="row">
-        <?php /*<div class="column left"><h1 id="site-title"><?php echo link_to_home_page(theme_logo(), array('alt' => 'Logo for Carleton Guide to Medieval Rome', 'title' => 'Logo for Carleton Guide to Medieval Rome')); ?></h1> 
-        </div>*/ ?>
         <div class="column left">
             <h1 id="site-title">
-                <a href="<?php echo html_escape(url('/')); ?>" title="<?php echo html_escape(option('site_title')); ?>">
+            <a href="<?php echo html_escape(url('/')); ?>" title="<?php echo html_escape(option('site_title')); ?>">
                     <?php if (theme_logo()): ?>
                         <?php echo theme_logo(); ?>
                     <?php else: ?>
