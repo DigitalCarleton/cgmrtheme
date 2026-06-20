@@ -203,7 +203,6 @@
     position: relative;
     text-align: center;
   }
-
   #site-title {
     float: left;
     padding: 0 2.85714%;
@@ -215,7 +214,7 @@
   }
   
   #site-title a {
-    /* padding: 0.5625em 0; */
+    /*padding: 0.5625em 0; */
     display: block;
     color: #DAA41B;
     font-variant: small-caps;
@@ -225,7 +224,7 @@
   #site-title img {
     float: left;
     height: 1.5em;
-    /* width: fit-content; */
+    /*width: fit-content; */
     content: url("../images/CGMR_03.png");
     vertical-align: bottom;
     opacity: 100;
@@ -2572,4 +2571,52 @@
   }
 
   /* @end */
+}
+
+body:not(.home) #site-title {
+  position: absolute;
+  top: 18px;
+  left: 8px;
+  right: auto;
+
+  width: 210px;
+  max-width: 210px;
+
+  margin: 0;
+  padding: 0;
+  z-index: 80;
+  text-align: left;
+  float: none;
+
+  overflow: visible;
+}
+
+body:not(.home) #site-title > a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  overflow: visible;
+}
+
+body:not(.home) #site-title .site-title-fallback {
+  display: block;
+  width: 100%;
+
+  font-size: 22px;
+  line-height: 1.15;
+  font-weight: 600;
+  color: #DAA41B;
+
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: normal;
+  word-break: normal;
+
+  overflow: visible;
+}
+
+body:not(.home) #navigation {
+  left: 0;
+  padding-left: 235px;
+  padding-right: 3.2%;
 }
